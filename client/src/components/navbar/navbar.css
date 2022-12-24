@@ -1,0 +1,42 @@
+.navbar {
+  height: 50px;
+  background-color: #44AFE6;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #0C92D9;
+}
+
+.ulogout {
+  padding: 4px 14px;
+  background-color: #0C92D9;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
