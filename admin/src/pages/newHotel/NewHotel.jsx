@@ -27,6 +27,8 @@ const NewHotel = () => {
 
     const handleClick = async (e) => {
         e.preventDefault();
+        const val = window.alert('Hotel Berhasil di Tambah!');
+
         try {
             const list = await Promise.all(
                 Object.values(files).map(async (file) => {
@@ -36,6 +38,7 @@ const NewHotel = () => {
                     const uploadRes = await axios.post('https://api.cloudinary.com/v1_1/lamadev/image/upload', data);
 
                     const { url } = uploadRes.data;
+                    console.log(val);
                     return url;
                 })
             );

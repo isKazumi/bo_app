@@ -3,7 +3,6 @@ import './featuredProperties.css';
 
 const FeaturedProperties = () => {
     const { data, loading } = useFetch('/hotels?featured=true&limit=4');
-
     return (
         <div className="fp">
             {loading ? (
@@ -15,7 +14,7 @@ const FeaturedProperties = () => {
                             <img src={item.photos[0]} alt="" className="fpImg" />
                             <span className="fpName">{item.name}</span>
                             <span className="fpCity">{item.city}</span>
-                            <span className="fpPrice">Harga mulai dari Rp.{item.cheapestPrice}</span>
+                            <span className="fpPrice">Harga mulai dari {item.cheapestPrice.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</span>
                             {item.rating && (
                                 <div className="fpRating">
                                     <button>{item.rating}</button>

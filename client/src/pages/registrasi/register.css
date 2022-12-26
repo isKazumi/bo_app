@@ -1,0 +1,38 @@
+.rcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 5px;
+}
+
+.rcontainer label {
+    color: #252525;
+    text-align: start;
+}
+
+.rcontainer .btn-regis {
+    color: #fff;
+    background-color: #0071c2;
+    padding: 6px 10px;
+    border: none;
+}
+
+.rcontainer .btn-log {
+    color: #fff;
+    background-color: #0071c2;
+    padding: 6px 10px;
+    border: none;
+    width: 100%;
+}
+
+.rcontainer input {
+    padding: 4px 10px;
+}
+
+
+.rcontainer span {
+    text-align: center;
+}

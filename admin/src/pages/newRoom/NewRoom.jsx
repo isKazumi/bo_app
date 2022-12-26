@@ -1,7 +1,6 @@
 import './newRoom.scss';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Navbar from '../../components/navbar/Navbar';
-// import DriveFolderUploadOutlinedIcon from '@mui/icons-material/DriveFolderUploadOutlined';
 import { useState } from 'react';
 import { roomInputs } from '../../formSource';
 import useFetch from '../../hooks/useFetch';
@@ -20,9 +19,11 @@ const NewRoom = () => {
 
     const handleClick = async (e) => {
         e.preventDefault();
+        const val = window.alert('Room Berhasil di Tambah!!!');
         const roomNumbers = rooms.split(',').map((room) => ({ number: room }));
         try {
             await axios.post(`/rooms/${hotelId}`, { ...info, roomNumbers });
+            console.log(val);
         } catch (err) {
             console.log(err);
         }

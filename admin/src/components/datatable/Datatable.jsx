@@ -30,9 +30,6 @@ const Datatable = ({ columns }) => {
             renderCell: (params) => {
                 return (
                     <div className="cellAction">
-                        <Link to={`/${path}/single`} style={{ textDecoration: 'none' }}>
-                            <div className="viewButton">Lihat</div>
-                        </Link>
                         <div className="deleteButton" onClick={() => handleDelete(params.row._id)}>
                             Hapus
                         </div>

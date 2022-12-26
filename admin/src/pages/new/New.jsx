@@ -22,7 +22,7 @@ const New = ({ inputs, title }) => {
             const uploadRes = await axios.post('https://api.cloudinary.com/v1_1/lamadev/image/upload', data);
 
             const { url } = uploadRes.data;
-            const val = window.alert('User Berhasil di Tamabh!');
+            const val = window.alert('User Berhasil di Tambah!');
 
             const newUser = {
                 ...info,
@@ -56,13 +56,19 @@ const New = ({ inputs, title }) => {
                                 </label>
                                 <input type="file" id="file" onChange={(e) => setFile(e.target.files[0])} style={{ display: 'none' }} />
                             </div>
-
                             {inputs.map((input) => (
                                 <div className="formInput" key={input.id}>
                                     <label>{input.label}</label>
                                     <input onChange={handleChange} type={input.type} placeholder={input.placeholder} id={input.id} />
                                 </div>
                             ))}
+                            <div className="formInput">
+                                <label>Admin?</label>
+                                <select id="isAdmin" onChange={handleChange}>
+                                    <option value={false}>No</option>
+                                    <option value={true}>Yes</option>
+                                </select>
+                            </div>
                             <button onClick={handleClick}>Kirim</button>
                         </form>
                     </div>
