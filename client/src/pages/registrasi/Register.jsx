@@ -20,7 +20,6 @@ function Register() {
     const { loading, error, dispatch } = useContext(AuthContext);
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
         dispatch({ type: 'LOGIN_START' });
         try {
             const res = await axios.post('/auth/register', formData);
